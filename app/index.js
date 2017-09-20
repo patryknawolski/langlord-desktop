@@ -1,12 +1,14 @@
-// Styles
 import './styles/application.scss';
+import render from './renderer.jsx';
 
-function getComponent() {
+createRoot();
+
+render();
+
+function createRoot() {
   const component = document.createElement('div');
 
-  component.innerHTML = 'Hello world';
+  component.id = 'root';
 
-  return component;
+  document.body.appendChild(component);
 }
-
-document.body.appendChild(getComponent());
